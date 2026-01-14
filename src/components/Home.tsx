@@ -112,7 +112,7 @@ export default function Home() {
 
       {/* Project Section */}
       <div className="relative z-10" id="Projects">
-        <h1>Projects</h1>
+        <h1 className="flex items-center justify-center bg-neutral-700 text-5xl font-bold">Projects</h1>
         <ProjectCollection>
           <div>
             <h2 className="text-2xl font-semibold">Pokéclash</h2>
