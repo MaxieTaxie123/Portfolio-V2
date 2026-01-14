@@ -12,7 +12,7 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: './',
+  base: '/Portfolio-V2/', // Use repo-prefixed path for GitHub Pages
   build: {
     outDir: 'dist',
   },
