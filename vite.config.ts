@@ -12,7 +12,9 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: './',
+  // Set base to the repository name for GitHub Pages
+  // This ensures built asset URLs resolve under /<user>/<repo>/
+  base: '/Portfolio-V2/',
   build: {
     outDir: 'dist',
   },
