@@ -12,7 +12,9 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: '/Portfolio-V2/', // Use repo-prefixed path for GitHub Pages
+  // Use the repo name when deploying to GitHub Pages
+  // If deploying to username.github.io (root), change to '/'
+  base: '/Portfolio-V2/',
   build: {
     outDir: 'dist',
   },
