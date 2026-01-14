@@ -4,8 +4,21 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Deploy to GitHub Pages
+
+- Ensure Vite base is set to `/Portfolio-V2/` in `vite.config.ts`.
+- Enable Pages with Source: GitHub Actions in repo Settings → Pages.
+- This repo includes `.github/workflows/pages.yml` which builds and deploys `dist`.
+- Push to `main` to trigger deployment. The site will be available at:
+  `https://<username>.github.io/Portfolio-V2/`.
+
+### Local build and preview
+
+```bash
+npm run build
+npm run preview
+```
 
 ## React Compiler
 
