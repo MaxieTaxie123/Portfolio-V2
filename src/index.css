@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: inset 10px black;
+}
+
+/* Smooth anchor scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Soft fade at the top and bottom edges of a section */
+.inset-shadow-y { position: relative; }
+.inset-shadow-y::before,
+.inset-shadow-y::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  pointer-events: none;
+  z-index: 1;
+}
+.inset-shadow-y::before { top: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0)); }
+.inset-shadow-y::after { bottom: 0; background: linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0)); }
+
+/* Force all descendants to inherit the parent's text color */
+.children-inherit-text, .children-inherit-text * {
+  color: inherit !important;
+}
+
+/* Also inherit for common SVG text-related properties */
+.children-inherit-text svg *,
+.children-inherit-text [fill] {
+  fill: currentColor !important;
+}
+
+.children-inherit-text [stroke] {
+  stroke: currentColor !important;
+}
