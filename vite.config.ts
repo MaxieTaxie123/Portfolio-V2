@@ -14,7 +14,7 @@ export default defineConfig({
   ],
   // Use the repo name when deploying to GitHub Pages
   // If deploying to username.github.io (root), change to '/'
-  base: '/Portfolio-V2/',
+  base: './',
   build: {
     outDir: 'dist',
   },

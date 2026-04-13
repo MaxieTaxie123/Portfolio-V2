@@ -26,7 +26,15 @@ export default function Sidebar() {
                         >
                             Projects
                         </button>
-                        <button className="w-full uppercase cursor-pointer text-3xl tracking-wide text-white/80 hover:text-white py-3 px-4 rounded transition-colors">About Me</button>
+                                                <button
+                            className="w-full uppercase cursor-pointer text-3xl tracking-wide text-white/80 hover:text-white py-3 px-4 rounded transition-colors"
+                            onClick={() => {
+                                document.getElementById('About')?.scrollIntoView({ behavior: 'smooth' });
+                                setCollapsed(true);
+                            }}
+                        >
+                            About Me
+                        </button>
                 </div>
             </aside>
 
@@ -35,7 +43,7 @@ export default function Sidebar() {
                 onClick={() => setCollapsed(!collapsed)}
                 aria-expanded={!collapsed}
                 aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-                className={`fixed top-4 z-50 rounded-full p-12 text-white shadow cursor-pointer transition-[left] duration-300 ${collapsed ? 'left-[1vw]' : 'left-[calc(20vw-3.5rem)]'}`}
+                className={`fixed top-4 z-50 rounded-full p-12 text-white cursor-pointer transition-[left] duration-300 ${collapsed ? 'left-[1vw]' : 'left-[calc(20vw-3.5rem)]'}`}
             >
                 {collapsed ? <Menu size={32} /> : <X size={32} />}
             </button>
